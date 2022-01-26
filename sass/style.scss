@@ -1,0 +1,35 @@
+//Variables
+
+//Couleurs
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99e2d0;
+$color-grey-form: #E0E0E0;
+$color-grey-footer: #808080;
+$color-default:black;
+
+//Polices
+$font-logo-title: "Shrikhand", "sans-seriff";
+$font-text: "Roboto", "sans-seriff";
+
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headersup
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;//65px
+}
+
+.headersup h1
+{
+    font-family: $font-logo-title;
+    color: $color-default;
+}
