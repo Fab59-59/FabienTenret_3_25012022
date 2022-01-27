@@ -4,7 +4,7 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99e2d0;
-$color-grey-form: #E0E0E0;
+$color-grey-form: #E2E2E2;
 $color-grey-footer: #808080;
 $color-default:black;
 
@@ -19,17 +19,53 @@ body
     box-sizing: border-box;
 }
 
-.headersup
+.headertop
 {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: auto;//65px
 }
 
-.headersup h1
+.headertop h1
 {
     font-family: $font-logo-title;
     color: $color-default;
 }
+
+.research
+{
+    background-color: $color-grey-footer;
+}
+
+.research__localisation
+{
+   background-color: $color-grey-form;
+   display: flex;
+   justify-content: center;
+   font-size: 16px;
+   box-shadow: inset 0 4px 5px #c0c0c0 ;
+   padding-top: 6px;
+}
+
+.fa-map-marker-alt
+{
+    background-color: $color-grey-form;
+    color:$color-default;
+    padding-top: 14px;
+    padding-right: 0px;
+}
+
+.countrytown
+{
+    padding-top: 14px;
+    padding-bottom: 20px;
+    width: 40%;
+    font-weight: bold; 
+    text-align: center;
+    border: none;
+    font-family: $font-text;
+    background-color: $color-grey-form;
+}
+
