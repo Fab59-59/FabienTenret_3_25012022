@@ -12,6 +12,14 @@ $color-default:black;
 $font-logo-title: "Shrikhand", "sans-seriff";
 $font-text: "Roboto", "sans-seriff";
 
+//mixins
+@mixin Base-shadow-box {
+    box-shadow: 0px 5px 10px #a5a5a5;
+}
+@mixin Lighten-background-hover {
+    opacity: 0.9;
+}
+
 body
 {
     margin: 0;
@@ -19,33 +27,44 @@ body
     box-sizing: border-box;
 }
 
+a
+{
+    text-decoration: none;
+    color: $color-default;
+}
+
 .headertop
 {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;//65px
 }
 
 .headertop h1
 {
     font-family: $font-logo-title;
-    color: $color-default;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 9px;
 }
 
 .research
 {
-    background-color: $color-grey-footer;
+    background-color: $color-grey-form;
+    box-shadow: inset 0 4px 5px #c0c0c0 ; 
+    display: flex;
+    justify-content: center;
+    height: 50px;
+
 }
 
 .research__localisation
 {
-   background-color: $color-grey-form;
    display: flex;
-   justify-content: center;
+   justify-content:center;
    font-size: 16px;
-   box-shadow: inset 0 4px 5px #c0c0c0 ;
    padding-top: 6px;
 }
 
@@ -53,19 +72,282 @@ body
 {
     background-color: $color-grey-form;
     color:$color-default;
-    padding-top: 14px;
-    padding-right: 0px;
+    padding-top: 7px;
+    padding-right: 16px;
+    padding-left: 2px;
 }
 
 .countrytown
 {
     padding-top: 14px;
     padding-bottom: 20px;
-    width: 40%;
-    font-weight: bold; 
-    text-align: center;
+    text-align: left;
     border: none;
     font-family: $font-text;
+    font-weight: 500;
     background-color: $color-grey-form;
+    width: 58%;
 }
 
+.research__description
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding:0;
+    background-color: #f2f2f2;
+    padding-top: 40px;
+    font-family: $font-text;
+}
+
+.research__description h2
+{
+    margin: 0;
+    padding: 0;
+    margin-left: 67px;
+    margin-right: 67px;
+    margin-bottom: 12px;
+}
+
+.research__description p
+{
+    font-size: 18px;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;   
+}
+
+.research__button
+{
+    background-image:linear-gradient($color-secondary, $color-primary) ;
+    width: 220px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    @include Base-shadow-box();
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 58px;
+}
+.research__button:hover
+{
+    opacity: 0.9;
+}
+
+.fonctionnement
+{
+    counter-reset: number;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    background-color: orange;
+
+    & h2{
+        margin: 0;
+        padding: 0;
+        margin-left: 20px;
+        margin-bottom: 25px;//35px
+        font-family: $font-text;
+
+    }
+
+    & ol{
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+        padding-right: 20px;
+        padding-left: 33px;
+        @media (max-width: 800px){
+            flex-direction: column;
+        }
+    }
+    
+    & li{
+        &::before{
+            content: counter(number);
+            counter-increment: number;
+            background-color:$color-primary;
+            color: white;
+            font-size: 14px;
+            font-weight: normal;
+            width: 26px;
+            height: 26px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            left: -13px;
+        }
+        position: relative;//information sur le li
+        list-style-type: none;
+        background-color: $color-grey-form;
+        flex-grow: 1;
+        font-family: $font-text;
+        font-size: 16px;
+        color: $color-default;
+        font-weight: 500;
+        // cursor: pointer;
+        padding-top: 28px;
+        padding-bottom: 28px;
+        border-radius: 15px;
+        display: flex;
+        align-items:center;
+        @include Base-shadow-box();
+        &:hover{
+            background-color: #e9d9ff;
+            color: #a15efd;
+        }
+        & i{
+            margin-right: 30px;//30px
+            margin-left: 35px;//40px
+            font-size: 20px;
+            color: grey;
+            &:hover{
+                color: #a15efd;
+            }
+        }
+        
+    }
+}
+
+.restaurant{
+    // background-color: burlywood;
+    padding-top: 60px;
+    padding-bottom: 45px;//moins les 20px du margin-bottom de restaurant cadre
+    font-family: $font-text;
+    & h2{
+        margin: 0;
+        padding: 0;
+        margin-left: 20px;
+        margin-bottom: 30px;
+    }
+    .restaurant_container{
+        // background-color: indigo;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        @media (min-width:1460px){
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 20px;
+        }
+    }
+        & .restaurant__cadre{
+            // background-color: red;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 20px;
+            @media (min-width: 768px){
+                flex-direction: row;
+            }
+            @media (min-width:1460px){
+                flex-grow: 1;
+            }
+        }
+        & a{
+            width: 100%;
+        }
+        & .new{
+            // background-color: red;
+            position: relative;
+        }
+        .new::before{
+            content:"Nouveau";
+            position:absolute;
+            width: 80px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: $color-tertiary;
+            right: 10px;
+            top:14px;
+            color: darken($color: $color-tertiary, $amount: 40%);
+            font-size: 14px;
+            font-weight: bolder;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include Base-shadow-box();
+
+        }
+        & .restaurant__card{
+            background-color: white;
+            min-width: 340px;
+            height: 250px;//250px
+            border: none;
+            border-radius: 20px;
+            @include Base-shadow-box();
+            & img{
+                width: 100%;
+                height: 70%;//175px
+                object-fit: cover;
+                border-radius: 20px 20px 0 0;
+            }
+            & .restaurant__description{
+                // background-color: yellow;
+                margin: 0;
+                padding:0;
+                margin-left: 14px;
+                display: flex;
+                flex-direction: column;
+                position: relative; 
+                & h4{
+                    margin: 0;
+                    padding: 0;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                & p{
+                    margin: 0;
+                    padding: 0;
+                    font-weight: lighter;
+                    margin-bottom: 20px;//20px
+                }
+                & i{
+                    font-size: 22px;
+                    position: absolute;
+                    // background-color: greenyellow;
+                    right: 25px;
+                    top: 23px;
+                }
+                & .fas{
+                    color: transparent;
+                    background-image: linear-gradient($color-secondary, $color-primary);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    opacity: 0;
+                    transition: all 300ms ease-in-out;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+
+                // & i:hover .fa-heart::before{
+                //     content: "\f004";
+                // }
+                
+            }
+        }
+}
+
+.footer_cadre{
+    background-color: $color-grey-footer;
+    width: 100%;
+    height: 196px;
+    color: $color-default;
+    margin: 0;
+    padding: 0;
+    & h3{
+        margin: 0;
+        padding: 0;
+    }
+}
