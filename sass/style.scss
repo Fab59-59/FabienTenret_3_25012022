@@ -1,14 +1,10 @@
 //Variables
-
-//Couleurs
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99e2d0;
 $color-grey-form: #E2E2E2;
 $color-grey-footer: #353535;
 $color-default:black;
-
-//Polices
 $font-logo-title: "Shrikhand", "sans-seriff";
 $font-text: "Roboto", "sans-seriff";
 
@@ -306,81 +302,73 @@ a
                 padding:0;
                 margin-left: 14px;
                 display: flex;
-                flex-direction: column;
-                position: relative;
-                // &::before{
-                //     display: inline-block;
-                //     font-style: normal;
-                //     font-variant: normal;
-                //     text-rendering: auto;
-                //     -webkit-font-smoothing: antialiased;
-                //     font-family: "Font Awesome 5 Free";
-                //     font-weight: 400;
-                //     content: "\f004";
-                //     font-size: 22px;
-                //     position: absolute;
-                //     right: 25px;
-                //     top: 23px;
-                //     color: $color-default;
-                //     opacity: 1; 
-                // }
-                // &::after{
-                //     display: inline-block;
-                //     font-style: normal;
-                //     font-variant: normal;
-                //     text-rendering: auto;
-                //     -webkit-font-smoothing: antialiased;
-                //     font-family: "Font Awesome 5 Free";
-                //     font-weight: 900;
-                //     content: "\f004";
-                //     font-size: 22px;
-                //     position: absolute;
-                //     right: 25px;
-                //     top: 23px;
-                //     color: transparent;
-                //     background-image: linear-gradient($color-secondary, $color-primary);
-                //     background-clip: text;
-                //     -webkit-background-clip: text;
-                //     opacity: 0;
-                //     transition: all 300ms ease-in-out;
-                // }
-                // &:hover::after{
-                //     opacity: 1;
-                // }   
-
-
-                & h4{
-                    margin: 0;
-                    padding: 0;
-                    margin-top: 10px;
-                    margin-bottom: 10px;
+                flex-direction: row;
+                justify-content: space-between;
+                // position: relative;
+                // background-color: green;
+                & .restaurant__text{
+                    // background-color: red;
+                    display: flex;
+                    flex-direction: column;
+                    & h4{
+                        margin: 0;
+                        padding: 0;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
+                    & p{
+                        margin: 0;
+                        padding: 0;
+                        font-weight: lighter;
+                        margin-bottom: 20px;//20px
+                    }
                 }
-                & p{
-                    margin: 0;
-                    padding: 0;
-                    font-weight: lighter;
-                    margin-bottom: 20px;//20px
-                }
-                & i{
-                    font-size: 22px;
-                    position: absolute;
-                    right: 25px;
-                    top: 23px;
-                }
-                & .fas{
-                    color: transparent;
-                    background-image: linear-gradient($color-secondary, $color-primary);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    opacity: 0;
-                    transition: all 300ms ease-in-out;
-                    &:hover{
+                & .restaurant__logo{
+                    // background-color: yellow;
+                    width: 10px;
+                    position: relative;
+                    &::before{
+                        content: "\f004";
+                        display: inline-block;
+                        font-style: normal;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 400;
+                        font-size: 22px;
+                        position: absolute;
+                        right: 25px;
+                        top: 23px;
+                        color: $color-default;
+                        opacity: 1;
+                    }
+                    &::after{
+                        display: inline-block;
+                        font-style: normal;
+                        font-variant: normal;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        content: "\f004";
+                        font-size: 22px;
+                        position: absolute;
+                        right: 25px;
+                        top: 23px;
+                        color: transparent;
+                        background-image: linear-gradient($color-secondary, $color-primary);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        opacity: 0;
+                        transition: all 300ms ease-in-out;
+                    }
+                    &:hover::after{
                         opacity: 1;
                     }
                 }
+                }
             }
         }
-}
 
 .footer_cadre{
     background-color: $color-grey-footer;
@@ -431,3 +419,99 @@ a
         }    
     }
 }
+
+//---01_menu1-La palette du goût-------------------------------------------------------------------------------------------------
+.background{
+    width: 100%;
+    height: auto;
+    background-color: blue;
+}
+.background_image{
+    width: 100%;
+    height: 300px;
+    // margin: 0;
+    // padding: 0;
+    background-color: blueviolet;
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.menu{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.menucontainer{
+    // position: absolute;
+    background-color: $color-grey-form;
+    width: 100%;
+    height: auto;
+    border-radius: 35px;
+    top: -4px;
+    & .menucontainer__titre{
+        // background-color: yellow;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        & h2{
+            margin: 0;
+            padding: 0;
+            margin-left: 20px;
+            font-family: $font-logo-title;
+            font-size: 28px;
+            font-weight: 500;
+            padding-top: 35px;
+        }  
+        & .menucontainer__logo{
+            // background-color: $color-tertiary;
+            width: 10px;
+            position: relative;
+            &::before{
+                    display: inline-block;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 400;
+                    content: "\f004";
+                    font-size: 22px;
+                    position: absolute;
+                    right: 40px;
+                    top: 37px;
+                    color: $color-default;
+                    opacity: 1; 
+                }
+                &:hover::before
+                {
+                    opacity: 0;
+                }
+                &::after{
+                    display: inline-block;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    content: "\f004";
+                    font-size: 22px;
+                    position: absolute;
+                    right: 40px;
+                    top: 37px;
+                    color: transparent;
+                    background-image: linear-gradient($color-secondary, $color-primary);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    opacity: 0;
+                    transition: all 300ms ease-in-out;
+                }
+                &:hover::after{
+                    opacity: 1;
+                }   
+        }
+    }
+}
+

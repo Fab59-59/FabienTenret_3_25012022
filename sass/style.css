@@ -355,35 +355,73 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.restaurant .restaurant__card .restaurant__description .restaurant__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
 }
 
-.restaurant .restaurant__card .restaurant__description h4 {
+.restaurant .restaurant__card .restaurant__description .restaurant__text h4 {
   margin: 0;
   padding: 0;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.restaurant .restaurant__card .restaurant__description p {
+.restaurant .restaurant__card .restaurant__description .restaurant__text p {
   margin: 0;
   padding: 0;
   font-weight: lighter;
   margin-bottom: 20px;
 }
 
-.restaurant .restaurant__card .restaurant__description i {
+.restaurant .restaurant__card .restaurant__description .restaurant__logo {
+  width: 10px;
+  position: relative;
+}
+
+.restaurant .restaurant__card .restaurant__description .restaurant__logo::before {
+  content: "\f004";
+  display: inline-block;
+  font-style: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
   font-size: 22px;
   position: absolute;
   right: 25px;
   top: 23px;
+  color: black;
+  opacity: 1;
 }
 
-.restaurant .restaurant__card .restaurant__description .fas {
+.restaurant .restaurant__card .restaurant__description .restaurant__logo::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 22px;
+  position: absolute;
+  right: 25px;
+  top: 23px;
   color: transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
@@ -394,7 +432,7 @@ a {
   transition: all 300ms ease-in-out;
 }
 
-.restaurant .restaurant__card .restaurant__description .fas:hover {
+.restaurant .restaurant__card .restaurant__description .restaurant__logo:hover::after {
   opacity: 1;
 }
 
@@ -450,5 +488,114 @@ a {
 .footer_cadre .footer__liste i {
   width: 22px;
   height: 16px;
+}
+
+.background {
+  width: 100%;
+  height: auto;
+  background-color: blue;
+}
+
+.background_image {
+  width: 100%;
+  height: 300px;
+  background-color: blueviolet;
+}
+
+.background_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.menucontainer {
+  background-color: #E2E2E2;
+  width: 100%;
+  height: auto;
+  border-radius: 35px;
+  top: -4px;
+}
+
+.menucontainer .menucontainer__titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menucontainer .menucontainer__titre h2 {
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  font-family: "Shrikhand", "sans-seriff";
+  font-size: 28px;
+  font-weight: 500;
+  padding-top: 35px;
+}
+
+.menucontainer .menucontainer__titre .menucontainer__logo {
+  width: 10px;
+  position: relative;
+}
+
+.menucontainer .menucontainer__titre .menucontainer__logo::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 22px;
+  position: absolute;
+  right: 40px;
+  top: 37px;
+  color: black;
+  opacity: 1;
+}
+
+.menucontainer .menucontainer__titre .menucontainer__logo:hover::before {
+  opacity: 0;
+}
+
+.menucontainer .menucontainer__titre .menucontainer__logo::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 22px;
+  position: absolute;
+  right: 40px;
+  top: 37px;
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.menucontainer .menucontainer__titre .menucontainer__logo:hover::after {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
