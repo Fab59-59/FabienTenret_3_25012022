@@ -1,22 +1,22 @@
 @-webkit-keyframes checkanim {
   0% {
-    -webkit-transform: rotate(-270deg);
-            transform: rotate(-270deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    -webkit-transform: rotate(365deg);
+            transform: rotate(365deg);
   }
 }
 
 @keyframes checkanim {
   0% {
-    -webkit-transform: rotate(-270deg);
-            transform: rotate(-270deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    -webkit-transform: rotate(365deg);
+            transform: rotate(365deg);
   }
 }
 
@@ -43,6 +43,52 @@
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes loaderdisappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes loaderdisappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes loaderdot {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transform: scaleX(1.2);
+            transform: scaleX(1.2);
+  }
+  100% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
+@keyframes loaderdot {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    -webkit-transform: scaleX(1.2);
+            transform: scaleX(1.2);
+  }
+  100% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
   }
 }
 
@@ -90,6 +136,64 @@ header .headertop__back .fa-arrow-left {
 
 header .headertop__back .fa-arrow-left:hover {
   color: #9356DC;
+}
+
+.loaderspinner {
+  position: fixed;
+  background-color: #E2E2E2;
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  opacity: 0.8;
+  -webkit-animation: loaderdisappear 0.5s;
+          animation: loaderdisappear 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loaderspinner .dot1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  margin: 0 15px 0 15px;
+  -webkit-animation: loaderdot infinite 0.3s alternate;
+          animation: loaderdot infinite 0.3s alternate;
+}
+
+.loaderspinner .dot2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #FF79DA;
+  margin: 0 15px;
+  -webkit-animation: loaderdot infinite 0.3s alternate;
+          animation: loaderdot infinite 0.3s alternate;
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+
+.loaderspinner .dot3 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #99e2d0;
+  margin: 0 15px;
+  -webkit-animation: loaderdot infinite 0.3s alternate;
+          animation: loaderdot infinite 0.3s alternate;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 
 .headertop {
@@ -256,6 +360,7 @@ header .headertop__back .fa-arrow-left:hover {
   font-size: 16px;
   color: black;
   font-weight: 500;
+  cursor: pointer;
   padding-top: 28px;
   padding-bottom: 28px;
   border-radius: 15px;
@@ -297,15 +402,15 @@ header .headertop__back .fa-arrow-left:hover {
   color: #a15efd;
 }
 
+.fonctionnement li:hover i {
+  color: #a15efd;
+}
+
 .fonctionnement li i {
   margin-right: 30px;
   margin-left: 35px;
   font-size: 20px;
   color: grey;
-}
-
-.fonctionnement li i:hover {
-  color: #a15efd;
 }
 
 .restaurant {
@@ -518,15 +623,11 @@ header .headertop__back .fa-arrow-left:hover {
   background-color: #353535;
   width: 100%;
   height: 197px;
-  margin: 0;
-  padding: 0;
   padding-top: 25px;
   padding-left: 25px;
 }
 
 .footer_cadre h3 {
-  margin: 0;
-  padding: 0;
   font-size: 18px;
   font-family: "Shrikhand", "sans-seriff";
   font-weight: 400;
@@ -535,8 +636,6 @@ header .headertop__back .fa-arrow-left:hover {
 }
 
 .footer_cadre .footer__liste {
-  margin: 0;
-  padding: 0;
   font-family: "Roboto", "sans-seriff";
   display: -webkit-box;
   display: -ms-flexbox;
@@ -564,6 +663,54 @@ header .headertop__back .fa-arrow-left:hover {
 }
 
 .footer_cadre .footer__liste i {
+  width: 22px;
+  height: 16px;
+}
+
+.footer_cadre2 {
+  background-color: #353535;
+  width: 100%;
+  height: auto;
+  padding-top: 105px;
+  padding-left: 25px;
+}
+
+.footer_cadre2 h3 {
+  font-size: 18px;
+  font-family: "Shrikhand", "sans-seriff";
+  font-weight: 400;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.footer_cadre2 .footer__liste {
+  font-family: "Roboto", "sans-seriff";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .footer_cadre2 .footer__liste {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2vw;
+  }
+}
+
+.footer_cadre2 .footer__liste a {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer_cadre2 .footer__liste i {
   width: 22px;
   height: 16px;
 }
@@ -858,13 +1005,13 @@ main {
           align-items: center;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e1:hover .li-e1__check {
+.menucontainer .container_epd .container__epd-e ul .li-e1:hover .li-e1__check, .menucontainer .container_epd .container__epd-e ul .li-e1:active .li-e1__check {
   margin-right: 0px;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e1 :hover i {
-  -webkit-animation: checkanim 0.5s ease-in-out;
-          animation: checkanim 0.5s ease-in-out;
+.menucontainer .container_epd .container__epd-e ul .li-e1:hover .li-e1__check i, .menucontainer .container_epd .container__epd-e ul .li-e1:active .li-e1__check i {
+  -webkit-animation: checkanim 1s ease-in-out;
+          animation: checkanim 1s ease-in-out;
 }
 
 .menucontainer .container_epd .container__epd-e ul .li-e2 {
@@ -883,8 +1030,8 @@ main {
   text-overflow: ellipsis;
   -webkit-box-shadow: 0px 5px 10px #949494;
           box-shadow: 0px 5px 10px #949494;
-  -webkit-animation: progressappear 0.5s ease-out;
-          animation: progressappear 0.5s ease-out;
+  -webkit-animation: progressappear 1s ease-out;
+          animation: progressappear 1s ease-out;
 }
 
 .menucontainer .container_epd .container__epd-e ul .li-e2 .li-e2__description {
@@ -990,8 +1137,8 @@ main {
   text-overflow: ellipsis;
   -webkit-box-shadow: 0px 5px 10px #949494;
           box-shadow: 0px 5px 10px #949494;
-  -webkit-animation: progressappear 0.5s ease-out;
-          animation: progressappear 0.5s ease-out;
+  -webkit-animation: progressappear 1.5s ease-out;
+          animation: progressappear 1.5s ease-out;
 }
 
 .menucontainer .container_epd .container__epd-e ul .li-e3 .li-e3__description {
@@ -1098,8 +1245,8 @@ main {
   text-overflow: ellipsis;
   -webkit-box-shadow: 0px 5px 10px #949494;
           box-shadow: 0px 5px 10px #949494;
-  -webkit-animation: progressappear 0.5s ease-out;
-          animation: progressappear 0.5s ease-out;
+  -webkit-animation: progressappear 2s ease-out;
+          animation: progressappear 2s ease-out;
 }
 
 .menucontainer .container_epd .container__epd-e ul .li-e4 .li-e4__description {
@@ -1351,8 +1498,8 @@ main {
   text-overflow: ellipsis;
   -webkit-box-shadow: 0px 5px 10px #949494;
           box-shadow: 0px 5px 10px #949494;
-  -webkit-animation: progressappear 0.5s ease-out;
-          animation: progressappear 0.5s ease-out;
+  -webkit-animation: progressappear 1s ease-out;
+          animation: progressappear 1s ease-out;
 }
 
 .menucontainer .container_epd .container__epd-p ul .li-p2 .li-p2__description {
@@ -1458,8 +1605,8 @@ main {
   text-overflow: ellipsis;
   -webkit-box-shadow: 0px 5px 10px #949494;
           box-shadow: 0px 5px 10px #949494;
-  -webkit-animation: progressappear 0.5s ease-out;
-          animation: progressappear 0.5s ease-out;
+  -webkit-animation: progressappear 1.5s ease-out;
+          animation: progressappear 1.5s ease-out;
 }
 
 .menucontainer .container_epd .container__epd-p ul .li-p3 .li-p3__description {
@@ -1711,8 +1858,8 @@ main {
   text-overflow: ellipsis;
   -webkit-box-shadow: 0px 5px 10px #949494;
           box-shadow: 0px 5px 10px #949494;
-  -webkit-animation: progressappear 0.5s ease-out;
-          animation: progressappear 0.5s ease-out;
+  -webkit-animation: progressappear 1s ease-out;
+          animation: progressappear 1s ease-out;
 }
 
 .menucontainer .container_epd .container__epd-d ul .li-d2 .li-d2__description {
@@ -1818,8 +1965,8 @@ main {
   text-overflow: ellipsis;
   -webkit-box-shadow: 0px 5px 10px #949494;
           box-shadow: 0px 5px 10px #949494;
-  -webkit-animation: progressappear 0.5s ease-out;
-          animation: progressappear 0.5s ease-out;
+  -webkit-animation: progressappear 1.5s ease-out;
+          animation: progressappear 1.5s ease-out;
 }
 
 .menucontainer .container_epd .container__epd-d ul .li-d3 .li-d3__description {

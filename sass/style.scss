@@ -16,15 +16,50 @@ $check-mvt:60px;
 @mixin Lighten-background-hover {
     opacity: 0.9;
 }
+@mixin footer{
+    background-color: $color-grey-footer;
+    width: 100%;
+    height: auto;//170px
+    padding-top: 105px;//25px-105px
+    padding-left: 25px;
+    & h3{
+        font-size: 18px;
+        font-family: $font-logo-title;
+        font-weight: 400;
+        color: white;
+        margin-bottom: 20px;
+    }
+    & .footer__liste{
+        font-family: $font-text;
+        display: flex;
+        flex-direction: column;
+        @media (min-width:768px){
+            flex-direction: row;
+            gap: 2vw;
+        }
+        & a{
+            font-size: 14px;
+            color: white;
+            margin-bottom: 10px;
+            }
+        & i{
+            width: 22px;
+            height: 16px;
+        }    
+    }
+}
 
 //animations
 @keyframes checkanim{
-    0%{
-        transform: rotate(-270deg);
-    }
-    100%{
-        transform: rotate(0);
-    }
+	0%{
+		// left: 20px;
+        transform: rotate(0deg);
+	}
+
+	100%{
+		transform: rotate(365deg);
+		// left: 0px;
+	}
 }
 
 @keyframes progressappear{
@@ -39,15 +74,31 @@ $check-mvt:60px;
     }
 }
 
+@keyframes loaderdisappear{
+    0%{
+        opacity:1
+    }
+    100%{
+        opacity:0;
+        z-index: -1;
+    }
+}
+@keyframes loaderdot{
+    0%{
+        transform: translateY(0px);
+        transform: scaleX(1.2);
+    }
+    100%{
+        transform: translateY(-30px);
+    }
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-// html{
-//     height: 100vh;
-// }
 body
 {
     margin: 0;
@@ -76,6 +127,46 @@ header{
                 color: $color-primary;
             }
         }
+    }
+}
+.loaderspinner{
+    position: fixed;
+    background-color: $color-grey-form;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    opacity: 0.8;
+    animation:loaderdisappear 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .dot1{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $color-primary;
+        margin: 0 15px 0 15px;
+        animation: loaderdot infinite 0.3s alternate;
+    }
+    & .dot2{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $color-secondary;
+        margin: 0 15px;
+        animation: loaderdot infinite 0.3s alternate;
+        animation-delay: 0.05s;
+    }
+    & .dot3{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $color-tertiary;
+        margin: 0 15px;
+        animation: loaderdot infinite 0.3s alternate;
+        animation-delay: 0.1s;
     }
 }
 .headertop
@@ -227,7 +318,7 @@ header{
         font-size: 16px;
         color: $color-default;
         font-weight: 500;
-        // cursor: pointer;
+        cursor: pointer;
         padding-top: 28px;
         padding-bottom: 28px;
         border-radius: 15px;
@@ -237,17 +328,16 @@ header{
         &:hover{
             background-color: #e9d9ff;
             color: #a15efd;
+            & i{
+                color:#a15efd
+            }
         }
         & i{
             margin-right: 30px;//30px
             margin-left: 35px;//40px
             font-size: 20px;
             color: grey;
-            &:hover{
-                color: #a15efd;
-            }
         }
-        
     }
 }
 
@@ -401,50 +491,36 @@ header{
     background-color: $color-grey-footer;
     width: 100%;
     height: 197px;//170px
-    margin: 0;
-    padding: 0;
-    // margin-bottom: 200px;
-    padding-top: 25px;
+    padding-top: 25px;//25px-105px
     padding-left: 25px;
     & h3{
-        margin: 0;
-        padding: 0;
-        // margin-left: 20px;
         font-size: 18px;
         font-family: $font-logo-title;
         font-weight: 400;
         color: white;
-        // background-color: blue;
         margin-bottom: 20px;
     }
     & .footer__liste{
-        margin: 0;
-        padding: 0;
-        // margin-left: 20px;
         font-family: $font-text;
-        // background-color: blueviolet;
         display: flex;
         flex-direction: column;
         @media (min-width:768px){
             flex-direction: row;
             gap: 2vw;
         }
-        
         & a{
             font-size: 14px;
             color: white;
             margin-bottom: 10px;
-            // position: relative;
-            // background-color: orange;
             }
         & i{
-            // background-color: red;
-            // font-size: 14px;
             width: 22px;
             height: 16px;
-            // margin-right: 2px;
         }    
     }
+}
+.footer_cadre2{
+  @include footer();  
 }
 
 //---01_menu1-La palette du goût-------------------------------------------------------------------------------------------------
@@ -663,11 +739,14 @@ main{
                              align-items: center;
                          }
                     }
-                    &:hover .li-e1__check{
-                        margin-right: 0px;
-                    }
-                    & :hover i{
-                        animation: checkanim 0.5s ease-in-out ;
+                    &:hover , &:active 
+                    {
+                        .li-e1__check{
+                            margin-right: 0px;
+                        }
+                        .li-e1__check i{
+                            animation: checkanim 1s ease-in-out ;
+                        }
                     }
                 }
                 & .li-e2{
@@ -680,7 +759,7 @@ main{
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     @include Base-shadow-box();
-                    animation: progressappear 0.5s ease-out;
+                    animation: progressappear 1s ease-out;
                     & .li-e2__description{
                         margin-left: 10px;
                         overflow: hidden;
@@ -758,7 +837,7 @@ main{
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     @include Base-shadow-box();
-                    animation: progressappear 0.5s ease-out;
+                    animation: progressappear 1.5s ease-out;
                     & .li-e3__description{
                         margin-left: 10px;
                         margin-left: 10px;
@@ -837,7 +916,7 @@ main{
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     @include Base-shadow-box();
-                    animation: progressappear 0.5s ease-out;
+                    animation: progressappear 2s ease-out;
                     & .li-e4__description{
                         margin-left: 10px;
                         overflow: hidden;
@@ -1025,7 +1104,7 @@ main{
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     @include Base-shadow-box();
-                    animation: progressappear 0.5s ease-out;
+                    animation: progressappear 1s ease-out;
                     & .li-p2__description{
                         margin-left: 10px;
                         overflow: hidden;
@@ -1103,7 +1182,7 @@ main{
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     @include Base-shadow-box();
-                    animation: progressappear 0.5s ease-out;
+                    animation: progressappear 1.5s ease-out;
                     & .li-p3__description{
                         margin-left: 10px;
                         overflow: hidden;
@@ -1291,7 +1370,7 @@ main{
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     @include Base-shadow-box();
-                    animation: progressappear 0.5s ease-out;
+                    animation: progressappear 1s ease-out;
                     & .li-d2__description{
                         margin-left: 10px;
                         overflow: hidden;
@@ -1369,7 +1448,7 @@ main{
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     @include Base-shadow-box();
-                    animation: progressappear 0.5s ease-out;
+                    animation: progressappear 1.5s ease-out;
                     & .li-d3__description{
                         margin-left: 10px;
                         overflow: hidden;
