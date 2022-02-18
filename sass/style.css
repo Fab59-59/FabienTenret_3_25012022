@@ -543,19 +543,25 @@ header .headertop__back .fa-arrow-left:hover {
   content: "\f004";
   display: inline-block;
   font-style: normal;
+  font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   font-size: 22px;
+  color: black;
   position: absolute;
+  opacity: 1;
   right: 25px;
   top: 23px;
-  color: black;
-  opacity: 1;
+}
+
+.restaurant .restaurant__card .restaurant__description .restaurant__logo:hover::before {
+  opacity: 0;
 }
 
 .restaurant .restaurant__card .restaurant__description .restaurant__logo::after {
+  content: "\f004";
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -563,17 +569,16 @@ header .headertop__back .fa-arrow-left:hover {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  content: "\f004";
   font-size: 22px;
+  color: transparent;
   position: absolute;
+  opacity: 0;
   right: 25px;
   top: 23px;
-  color: transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
-  opacity: 0;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
@@ -713,12 +718,10 @@ main {
 
 .menucontainer .menucontainer__titre h2 {
   margin-left: 20px;
-  padding-right: 60px;
+  padding: 35px 60px 16px 0;
   font-family: "Shrikhand", "sans-seriff";
   font-size: 28px;
   font-weight: 500;
-  padding-top: 35px;
-  padding-bottom: 16px;
 }
 
 .menucontainer .menucontainer__titre .menucontainer__logo {
@@ -727,6 +730,7 @@ main {
 }
 
 .menucontainer .menucontainer__titre .menucontainer__logo::before {
+  content: "\f004";
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -734,13 +738,12 @@ main {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
-  content: "\f004";
   font-size: 22px;
+  color: black;
   position: absolute;
+  opacity: 1;
   right: 40px;
   top: 37px;
-  color: black;
-  opacity: 1;
 }
 
 .menucontainer .menucontainer__titre .menucontainer__logo:hover::before {
@@ -748,6 +751,7 @@ main {
 }
 
 .menucontainer .menucontainer__titre .menucontainer__logo::after {
+  content: "\f004";
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -755,23 +759,24 @@ main {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  content: "\f004";
   font-size: 22px;
+  color: transparent;
   position: absolute;
+  opacity: 0;
   right: 40px;
   top: 37px;
-  color: transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
-  opacity: 0;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 
 .menucontainer .menucontainer__titre .menucontainer__logo:hover::after {
   opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .menucontainer .container_epd {
@@ -808,8 +813,7 @@ main {
 }
 
 .menucontainer .container_epd .container__epd-e h3 {
-  margin-left: 20px;
-  margin-top: 20px;
+  margin: 20px 0 0 20px;
   font-family: "Roboto", "sans-seriff";
   font-size: 16px;
   text-transform: uppercase;
@@ -821,15 +825,13 @@ main {
   display: block;
   width: 40px;
   height: 3px;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  margin: 5px 0 15px 0;
   background-color: #99e2d0;
 }
 
 .menucontainer .container_epd .container__epd-e ul {
   list-style: none;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 0 15px 0 15px;
 }
 
 .menucontainer .container_epd .container__epd-e ul .li-e1 {
@@ -852,44 +854,42 @@ main {
           animation: progressappear 0.5s ease-out;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e1 .li-e1__description {
-  margin-left: 10px;
+.menucontainer .container_epd .container__epd-e ul .li-e1 .description {
+  margin: 0 0 0 10px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e1 .li-e1__description h4 {
+.menucontainer .container_epd .container__epd-e ul .li-e1 .description h4 {
   font-size: 18px;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin: 15px 0 5px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e1 .li-e1__description p {
+.menucontainer .container_epd .container__epd-e ul .li-e1 .description p {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e1 .li-e1__price {
-  margin-right: 20px;
-  margin-left: auto;
+.menucontainer .container_epd .container__epd-e ul .li-e1 .price {
+  margin: 0 20px 0 auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e1 .li-e1__price p {
+.menucontainer .container_epd .container__epd-e ul .li-e1 .price p {
   font-size: 14px;
   font-weight: bold;
   padding-top: 40px;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e1 .li-e1__check {
+.menucontainer .container_epd .container__epd-e ul .li-e1 .check {
   background-color: #99e2d0;
   width: 60px;
   margin-right: -60px;
@@ -909,7 +909,7 @@ main {
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e1 .li-e1__check i {
+.menucontainer .container_epd .container__epd-e ul .li-e1 .check i {
   font-size: 15px;
   color: #99e2d0;
   font-weight: 900;
@@ -928,11 +928,11 @@ main {
           align-items: center;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e1:hover .li-e1__check, .menucontainer .container_epd .container__epd-e ul .li-e1:active .li-e1__check {
+.menucontainer .container_epd .container__epd-e ul .li-e1:hover .check, .menucontainer .container_epd .container__epd-e ul .li-e1:active .check {
   margin-right: 0px;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e1:hover .li-e1__check i, .menucontainer .container_epd .container__epd-e ul .li-e1:active .li-e1__check i {
+.menucontainer .container_epd .container__epd-e ul .li-e1:hover .check i, .menucontainer .container_epd .container__epd-e ul .li-e1:active .check i {
   -webkit-animation: checkanim 1s ease-in-out;
           animation: checkanim 1s ease-in-out;
 }
@@ -957,46 +957,42 @@ main {
           animation: progressappear 1s ease-out;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e2 .li-e2__description {
-  margin-left: 10px;
+.menucontainer .container_epd .container__epd-e ul .li-e2 .description {
+  margin: 0 0 0 10px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e2 .li-e2__description h4 {
+.menucontainer .container_epd .container__epd-e ul .li-e2 .description h4 {
   font-size: 18px;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin: 15px 0 5px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e2 .li-e2__description p {
+.menucontainer .container_epd .container__epd-e ul .li-e2 .description p {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e2 .li-e2__price {
-  margin-right: 20px;
-  margin-left: auto;
+.menucontainer .container_epd .container__epd-e ul .li-e2 .price {
+  margin: 0 20px 0 auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e2 .li-e2__price p {
-  margin: 0;
-  padding: 0;
+.menucontainer .container_epd .container__epd-e ul .li-e2 .price p {
   font-size: 14px;
   font-weight: bold;
   padding-top: 40px;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e2 .li-e2__check {
+.menucontainer .container_epd .container__epd-e ul .li-e2 .check {
   background-color: #99e2d0;
   width: 60px;
   margin-right: -60px;
@@ -1016,7 +1012,7 @@ main {
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e2 .li-e2__check i {
+.menucontainer .container_epd .container__epd-e ul .li-e2 .check i {
   font-size: 15px;
   color: #99e2d0;
   font-weight: 900;
@@ -1035,13 +1031,13 @@ main {
           align-items: center;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e2:hover .li-e2__check {
+.menucontainer .container_epd .container__epd-e ul .li-e2:hover .check, .menucontainer .container_epd .container__epd-e ul .li-e2:active .check {
   margin-right: 0px;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e2 :hover i {
-  -webkit-animation: checkanim 0.5s ease-in-out;
-          animation: checkanim 0.5s ease-in-out;
+.menucontainer .container_epd .container__epd-e ul .li-e2:hover .check i, .menucontainer .container_epd .container__epd-e ul .li-e2:active .check i {
+  -webkit-animation: checkanim 1s ease-in-out;
+          animation: checkanim 1s ease-in-out;
 }
 
 .menucontainer .container_epd .container__epd-e ul .li-e3 {
@@ -1064,47 +1060,42 @@ main {
           animation: progressappear 1.5s ease-out;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e3 .li-e3__description {
-  margin-left: 10px;
-  margin-left: 10px;
+.menucontainer .container_epd .container__epd-e ul .li-e3 .description {
+  margin: 0 0 0 10px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e3 .li-e3__description h4 {
+.menucontainer .container_epd .container__epd-e ul .li-e3 .description h4 {
   font-size: 18px;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin: 15px 0 5px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e3 .li-e3__description p {
+.menucontainer .container_epd .container__epd-e ul .li-e3 .description p {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e3 .li-e3__price {
-  margin-right: 20px;
-  margin-left: auto;
+.menucontainer .container_epd .container__epd-e ul .li-e3 .price {
+  margin: 0 20px 0 auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e3 .li-e3__price p {
-  margin: 0;
-  padding: 0;
+.menucontainer .container_epd .container__epd-e ul .li-e3 .price p {
   font-size: 14px;
   font-weight: bold;
   padding-top: 40px;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e3 .li-e3__check {
+.menucontainer .container_epd .container__epd-e ul .li-e3 .check {
   background-color: #99e2d0;
   width: 60px;
   margin-right: -60px;
@@ -1124,7 +1115,7 @@ main {
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e3 .li-e3__check i {
+.menucontainer .container_epd .container__epd-e ul .li-e3 .check i {
   font-size: 15px;
   color: #99e2d0;
   font-weight: 900;
@@ -1143,13 +1134,13 @@ main {
           align-items: center;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e3:hover .li-e3__check {
+.menucontainer .container_epd .container__epd-e ul .li-e3:hover .check, .menucontainer .container_epd .container__epd-e ul .li-e3:active .check {
   margin-right: 0px;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e3 :hover i {
-  -webkit-animation: checkanim 0.5s ease-in-out;
-          animation: checkanim 0.5s ease-in-out;
+.menucontainer .container_epd .container__epd-e ul .li-e3:hover .check i, .menucontainer .container_epd .container__epd-e ul .li-e3:active .check i {
+  -webkit-animation: checkanim 1s ease-in-out;
+          animation: checkanim 1s ease-in-out;
 }
 
 .menucontainer .container_epd .container__epd-e ul .li-e4 {
@@ -1172,46 +1163,42 @@ main {
           animation: progressappear 2s ease-out;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e4 .li-e4__description {
-  margin-left: 10px;
+.menucontainer .container_epd .container__epd-e ul .li-e4 .description {
+  margin: 0 0 0 10px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e4 .li-e4__description h4 {
+.menucontainer .container_epd .container__epd-e ul .li-e4 .description h4 {
   font-size: 18px;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin: 15px 0 5px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e4 .li-e4__description p {
+.menucontainer .container_epd .container__epd-e ul .li-e4 .description p {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e4 .li-e4__price {
-  margin-right: 20px;
-  margin-left: auto;
+.menucontainer .container_epd .container__epd-e ul .li-e4 .price {
+  margin: 0 20px 0 auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e4 .li-e4__price p {
-  margin: 0;
-  padding: 0;
+.menucontainer .container_epd .container__epd-e ul .li-e4 .price p {
   font-size: 14px;
   font-weight: bold;
   padding-top: 40px;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e4 .li-e4__check {
+.menucontainer .container_epd .container__epd-e ul .li-e4 .check {
   background-color: #99e2d0;
   width: 60px;
   margin-right: -60px;
@@ -1231,7 +1218,7 @@ main {
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e4 .li-e4__check i {
+.menucontainer .container_epd .container__epd-e ul .li-e4 .check i {
   font-size: 15px;
   color: #99e2d0;
   font-weight: 900;
@@ -1250,13 +1237,13 @@ main {
           align-items: center;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e4:hover .li-e4__check {
+.menucontainer .container_epd .container__epd-e ul .li-e4:hover .check, .menucontainer .container_epd .container__epd-e ul .li-e4:active .check {
   margin-right: 0px;
 }
 
-.menucontainer .container_epd .container__epd-e ul .li-e4 :hover i {
-  -webkit-animation: checkanim 0.5s ease-in-out;
-          animation: checkanim 0.5s ease-in-out;
+.menucontainer .container_epd .container__epd-e ul .li-e4:hover .check i, .menucontainer .container_epd .container__epd-e ul .li-e4:active .check i {
+  -webkit-animation: checkanim 1s ease-in-out;
+          animation: checkanim 1s ease-in-out;
 }
 
 .menucontainer .container_epd .container__epd-p {
@@ -1270,8 +1257,7 @@ main {
 }
 
 .menucontainer .container_epd .container__epd-p h3 {
-  margin-left: 20px;
-  margin-top: 20px;
+  margin: 20px 0 0 20px;
   font-family: "Roboto", "sans-seriff";
   font-size: 16px;
   text-transform: uppercase;
@@ -1283,15 +1269,13 @@ main {
   display: block;
   width: 40px;
   height: 3px;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  margin: 5px 0 15px 0;
   background-color: #99e2d0;
 }
 
 .menucontainer .container_epd .container__epd-p ul {
   list-style: none;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 0 15px 0 15px;
 }
 
 .menucontainer .container_epd .container__epd-p ul .li-p1 {
@@ -1314,50 +1298,42 @@ main {
           animation: progressappear 0.5s ease-out;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p1 .li-p1__description {
-  margin-left: 10px;
+.menucontainer .container_epd .container__epd-p ul .li-p1 .description {
+  margin: 0 0 0 10px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p1 .li-p1__description h4 {
-  margin: 0;
-  padding: 0;
+.menucontainer .container_epd .container__epd-p ul .li-p1 .description h4 {
   font-size: 18px;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin: 15px 0 5px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p1 .li-p1__description p {
+.menucontainer .container_epd .container__epd-p ul .li-p1 .description p {
   font-size: 14px;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p1 .li-p1__price {
-  margin-right: 20px;
-  margin-left: auto;
+.menucontainer .container_epd .container__epd-p ul .li-p1 .price {
+  margin: 0 20px 0 auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p1 .li-p1__price p {
-  margin: 0;
-  padding: 0;
+.menucontainer .container_epd .container__epd-p ul .li-p1 .price p {
   font-size: 14px;
   font-weight: bold;
   padding-top: 40px;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p1 .li-p1__check {
+.menucontainer .container_epd .container__epd-p ul .li-p1 .check {
   background-color: #99e2d0;
   width: 60px;
   margin-right: -60px;
@@ -1377,7 +1353,7 @@ main {
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p1 .li-p1__check i {
+.menucontainer .container_epd .container__epd-p ul .li-p1 .check i {
   font-size: 15px;
   color: #99e2d0;
   font-weight: 900;
@@ -1396,13 +1372,13 @@ main {
           align-items: center;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p1:hover .li-p1__check {
+.menucontainer .container_epd .container__epd-p ul .li-p1:hover .check, .menucontainer .container_epd .container__epd-p ul .li-p1:active .check {
   margin-right: 0px;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p1 :hover i {
-  -webkit-animation: checkanim 0.5s ease-in-out;
-          animation: checkanim 0.5s ease-in-out;
+.menucontainer .container_epd .container__epd-p ul .li-p1:hover .check i, .menucontainer .container_epd .container__epd-p ul .li-p1:active .check i {
+  -webkit-animation: checkanim 1s ease-in-out;
+          animation: checkanim 1s ease-in-out;
 }
 
 .menucontainer .container_epd .container__epd-p ul .li-p2 {
@@ -1425,46 +1401,42 @@ main {
           animation: progressappear 1s ease-out;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p2 .li-p2__description {
-  margin-left: 10px;
+.menucontainer .container_epd .container__epd-p ul .li-p2 .description {
+  margin: 0 0 0 10px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p2 .li-p2__description h4 {
+.menucontainer .container_epd .container__epd-p ul .li-p2 .description h4 {
   font-size: 18px;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin: 15px 0 5px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p2 .li-p2__description p {
+.menucontainer .container_epd .container__epd-p ul .li-p2 .description p {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p2 .li-p2__price {
-  margin-right: 20px;
-  margin-left: auto;
+.menucontainer .container_epd .container__epd-p ul .li-p2 .price {
+  margin: 0 20px 0 auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p2 .li-p2__price p {
-  margin: 0;
-  padding: 0;
+.menucontainer .container_epd .container__epd-p ul .li-p2 .price p {
   font-size: 14px;
   font-weight: bold;
   padding-top: 40px;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p2 .li-p2__check {
+.menucontainer .container_epd .container__epd-p ul .li-p2 .check {
   background-color: #99e2d0;
   width: 60px;
   margin-right: -60px;
@@ -1484,7 +1456,7 @@ main {
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p2 .li-p2__check i {
+.menucontainer .container_epd .container__epd-p ul .li-p2 .check i {
   font-size: 15px;
   color: #99e2d0;
   font-weight: 900;
@@ -1503,13 +1475,13 @@ main {
           align-items: center;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p2:hover .li-p2__check {
+.menucontainer .container_epd .container__epd-p ul .li-p2:hover .check, .menucontainer .container_epd .container__epd-p ul .li-p2:active .check {
   margin-right: 0px;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p2 :hover i {
-  -webkit-animation: checkanim 0.5s ease-in-out;
-          animation: checkanim 0.5s ease-in-out;
+.menucontainer .container_epd .container__epd-p ul .li-p2:hover .check i, .menucontainer .container_epd .container__epd-p ul .li-p2:active .check i {
+  -webkit-animation: checkanim 1s ease-in-out;
+          animation: checkanim 1s ease-in-out;
 }
 
 .menucontainer .container_epd .container__epd-p ul .li-p3 {
@@ -1532,46 +1504,42 @@ main {
           animation: progressappear 1.5s ease-out;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p3 .li-p3__description {
-  margin-left: 10px;
+.menucontainer .container_epd .container__epd-p ul .li-p3 .description {
+  margin: 0 0 0 10px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p3 .li-p3__description h4 {
+.menucontainer .container_epd .container__epd-p ul .li-p3 .description h4 {
   font-size: 18px;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin: 15px 0 5px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p3 .li-p3__description p {
+.menucontainer .container_epd .container__epd-p ul .li-p3 .description p {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p3 .li-p3__price {
-  margin-right: 20px;
-  margin-left: auto;
+.menucontainer .container_epd .container__epd-p ul .li-p3 .price {
+  margin: 0 20px 0 auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p3 .li-p3__price p {
-  margin: 0;
-  padding: 0;
+.menucontainer .container_epd .container__epd-p ul .li-p3 .price p {
   font-size: 14px;
   font-weight: bold;
   padding-top: 40px;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p3 .li-p3__check {
+.menucontainer .container_epd .container__epd-p ul .li-p3 .check {
   background-color: #99e2d0;
   width: 60px;
   margin-right: -60px;
@@ -1591,7 +1559,7 @@ main {
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p3 .li-p3__check i {
+.menucontainer .container_epd .container__epd-p ul .li-p3 .check i {
   font-size: 15px;
   color: #99e2d0;
   font-weight: 900;
@@ -1610,13 +1578,13 @@ main {
           align-items: center;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p3:hover .li-p3__check {
+.menucontainer .container_epd .container__epd-p ul .li-p3:hover .check, .menucontainer .container_epd .container__epd-p ul .li-p3:active .check {
   margin-right: 0px;
 }
 
-.menucontainer .container_epd .container__epd-p ul .li-p3 :hover i {
-  -webkit-animation: checkanim 0.5s ease-in-out;
-          animation: checkanim 0.5s ease-in-out;
+.menucontainer .container_epd .container__epd-p ul .li-p3:hover .check i, .menucontainer .container_epd .container__epd-p ul .li-p3:active .check i {
+  -webkit-animation: checkanim 1s ease-in-out;
+          animation: checkanim 1s ease-in-out;
 }
 
 .menucontainer .container_epd .container__epd-d {
@@ -1630,8 +1598,7 @@ main {
 }
 
 .menucontainer .container_epd .container__epd-d h3 {
-  margin-left: 20px;
-  margin-top: 20px;
+  margin: 20px 0 0 20px;
   font-family: "Roboto", "sans-seriff";
   font-size: 16px;
   text-transform: uppercase;
@@ -1643,15 +1610,13 @@ main {
   display: block;
   width: 40px;
   height: 3px;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  margin: 5px 0 15px 0;
   background-color: #99e2d0;
 }
 
 .menucontainer .container_epd .container__epd-d ul {
   list-style: none;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 0 15px 0 15px;
 }
 
 .menucontainer .container_epd .container__epd-d ul .li-d1 {
@@ -1674,50 +1639,42 @@ main {
           animation: progressappear 0.5s ease-out;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d1 .li-d1__description {
-  margin-left: 10px;
+.menucontainer .container_epd .container__epd-d ul .li-d1 .description {
+  margin: 0 0 0 10px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d1 .li-d1__description h4 {
-  margin: 0;
-  padding: 0;
+.menucontainer .container_epd .container__epd-d ul .li-d1 .description h4 {
   font-size: 18px;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin: 15px 0 5px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d1 .li-d1__description p {
+.menucontainer .container_epd .container__epd-d ul .li-d1 .description p {
   font-size: 14px;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d1 .li-d1__price {
-  margin-right: 20px;
-  margin-left: auto;
+.menucontainer .container_epd .container__epd-d ul .li-d1 .price {
+  margin: 0 20px 0 auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d1 .li-d1__price p {
-  margin: 0;
-  padding: 0;
+.menucontainer .container_epd .container__epd-d ul .li-d1 .price p {
   font-size: 14px;
   font-weight: bold;
   padding-top: 40px;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d1 .li-d1__check {
+.menucontainer .container_epd .container__epd-d ul .li-d1 .check {
   background-color: #99e2d0;
   width: 60px;
   margin-right: -60px;
@@ -1737,7 +1694,7 @@ main {
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d1 .li-d1__check i {
+.menucontainer .container_epd .container__epd-d ul .li-d1 .check i {
   font-size: 15px;
   color: #99e2d0;
   font-weight: 900;
@@ -1756,13 +1713,13 @@ main {
           align-items: center;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d1:hover .li-d1__check {
+.menucontainer .container_epd .container__epd-d ul .li-d1:hover .check, .menucontainer .container_epd .container__epd-d ul .li-d1:active .check {
   margin-right: 0px;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d1 :hover i {
-  -webkit-animation: checkanim 0.5s ease-in-out;
-          animation: checkanim 0.5s ease-in-out;
+.menucontainer .container_epd .container__epd-d ul .li-d1:hover .check i, .menucontainer .container_epd .container__epd-d ul .li-d1:active .check i {
+  -webkit-animation: checkanim 1s ease-in-out;
+          animation: checkanim 1s ease-in-out;
 }
 
 .menucontainer .container_epd .container__epd-d ul .li-d2 {
@@ -1785,46 +1742,42 @@ main {
           animation: progressappear 1s ease-out;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d2 .li-d2__description {
-  margin-left: 10px;
+.menucontainer .container_epd .container__epd-d ul .li-d2 .description {
+  margin: 0 0 0 10px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d2 .li-d2__description h4 {
+.menucontainer .container_epd .container__epd-d ul .li-d2 .description h4 {
   font-size: 18px;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin: 15px 0 5px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d2 .li-d2__description p {
+.menucontainer .container_epd .container__epd-d ul .li-d2 .description p {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d2 .li-d2__price {
-  margin-right: 20px;
-  margin-left: auto;
+.menucontainer .container_epd .container__epd-d ul .li-d2 .price {
+  margin: 0 20px 0 auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d2 .li-d2__price p {
-  margin: 0;
-  padding: 0;
+.menucontainer .container_epd .container__epd-d ul .li-d2 .price p {
   font-size: 14px;
   font-weight: bold;
   padding-top: 40px;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d2 .li-d2__check {
+.menucontainer .container_epd .container__epd-d ul .li-d2 .check {
   background-color: #99e2d0;
   width: 60px;
   margin-right: -60px;
@@ -1844,7 +1797,7 @@ main {
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d2 .li-d2__check i {
+.menucontainer .container_epd .container__epd-d ul .li-d2 .check i {
   font-size: 15px;
   color: #99e2d0;
   font-weight: 900;
@@ -1863,13 +1816,13 @@ main {
           align-items: center;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d2:hover .li-d2__check {
+.menucontainer .container_epd .container__epd-d ul .li-d2:hover .check, .menucontainer .container_epd .container__epd-d ul .li-d2:active .check {
   margin-right: 0px;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d2 :hover i {
-  -webkit-animation: checkanim 0.5s ease-in-out;
-          animation: checkanim 0.5s ease-in-out;
+.menucontainer .container_epd .container__epd-d ul .li-d2:hover .check i, .menucontainer .container_epd .container__epd-d ul .li-d2:active .check i {
+  -webkit-animation: checkanim 1s ease-in-out;
+          animation: checkanim 1s ease-in-out;
 }
 
 .menucontainer .container_epd .container__epd-d ul .li-d3 {
@@ -1892,46 +1845,42 @@ main {
           animation: progressappear 1.5s ease-out;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d3 .li-d3__description {
-  margin-left: 10px;
+.menucontainer .container_epd .container__epd-d ul .li-d3 .description {
+  margin: 0 0 0 10px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d3 .li-d3__description h4 {
+.menucontainer .container_epd .container__epd-d ul .li-d3 .description h4 {
   font-size: 18px;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin: 15px 0 5px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d3 .li-d3__description p {
+.menucontainer .container_epd .container__epd-d ul .li-d3 .description p {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d3 .li-d3__price {
-  margin-right: 20px;
-  margin-left: auto;
+.menucontainer .container_epd .container__epd-d ul .li-d3 .price {
+  margin: 0 20px 0 auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d3 .li-d3__price p {
-  margin: 0;
-  padding: 0;
+.menucontainer .container_epd .container__epd-d ul .li-d3 .price p {
   font-size: 14px;
   font-weight: bold;
   padding-top: 40px;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d3 .li-d3__check {
+.menucontainer .container_epd .container__epd-d ul .li-d3 .check {
   background-color: #99e2d0;
   width: 60px;
   margin-right: -60px;
@@ -1951,7 +1900,7 @@ main {
       flex-shrink: 0;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d3 .li-d3__check i {
+.menucontainer .container_epd .container__epd-d ul .li-d3 .check i {
   font-size: 15px;
   color: #99e2d0;
   font-weight: 900;
@@ -1970,13 +1919,13 @@ main {
           align-items: center;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d3:hover .li-d3__check {
+.menucontainer .container_epd .container__epd-d ul .li-d3:hover .check, .menucontainer .container_epd .container__epd-d ul .li-d3:active .check {
   margin-right: 0px;
 }
 
-.menucontainer .container_epd .container__epd-d ul .li-d3 :hover i {
-  -webkit-animation: checkanim 0.5s ease-in-out;
-          animation: checkanim 0.5s ease-in-out;
+.menucontainer .container_epd .container__epd-d ul .li-d3:hover .check i, .menucontainer .container_epd .container__epd-d ul .li-d3:active .check i {
+  -webkit-animation: checkanim 1s ease-in-out;
+          animation: checkanim 1s ease-in-out;
 }
 
 .menucontainer .command_container {
