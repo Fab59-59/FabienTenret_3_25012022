@@ -79,6 +79,7 @@ $meal-animation:0.5s;
     position: relative;
     width: 100%;
     height: $menu-height;//1100px pr menu1-1183px menu2
+    background-color: $color-grey-form;
     @media (min-width: 992px){
         height: $menu-height2;//487px pr menu1-567px pr menu02
     }
