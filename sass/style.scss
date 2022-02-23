@@ -13,7 +13,9 @@ $button-margintop: 0px;
 $button-marginright: 0px;
 $button-marginbottom: 0px;
 $button-marginleft: 0px;
-$menu-height:487px;
+$menu-height:1100px;
+$menu-height2:487px;
+$menu-height3:1133px;
 $beafbl-width:260px;
 $beafbl-height:260px;
 $beafbl-fontsize:16px;
@@ -53,8 +55,9 @@ $meal-animation:0.5s;
     cursor: pointer;
     margin: $button-margintop $button-marginright $button-marginbottom $button-marginleft;// haut,droite,bas,gauche
 }
-@mixin Lighten-background-hover {
+@mixin buttonhover {
     opacity: 0.9;
+    box-shadow: 0px 5px 10px rgb(70, 69, 69);
 }
 @mixin flexboxcenter{
     display:flex;
@@ -72,12 +75,15 @@ $meal-animation:0.5s;
     color:$beafblcolor;
     @include flexboxcenter();
 }
-@mixin menu ($menu-height){
+@mixin menu ($menu-height, $menu-height2, $menu-height3){
     position: relative;
     width: 100%;
-    height: 1100px;
+    height: $menu-height;//1100px pr menu1-1183px menu2
     @media (min-width: 992px){
-        height: $menu-height;//487px-567px pr menu02
+        height: $menu-height2;//487px pr menu1-567px pr menu02
+    }
+    @media (max-width:356px){
+        height: $menu-height3;//1133px menu1-1215px menu2
     }
 }
 @mixin beforeafterheart($beafheart-fontweight, $beafheart-color, $beafheart-opacity){
@@ -212,13 +218,11 @@ $meal-animation:0.5s;
 //animations---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 @keyframes checkanim{
 	0%{
-		// left: 20px;
         transform: rotate(0deg);
 	}
 
 	100%{
 		transform: rotate(365deg);
-		// left: 0px;
 	}
 }
 
@@ -378,7 +382,7 @@ header{
 }
 .research__button:hover
 {
-    opacity: 0.9;
+    @include buttonhover();
 }
 
 .fonctionnement{
@@ -558,10 +562,10 @@ main{
     }
 }
 .menu{
-    @include menu(487px);
+   @include menu(1100px, 487px, 1133px);
 }
 .menu2{
-    @include menu(567px);
+   @include menu(1183px, 567px, 1215px);
 }
 .menucontainer{
     position: absolute;
@@ -656,7 +660,7 @@ main{
             @include Button(40px, 0px, 57px, 0px);
         }
         & .command__button:hover{
-            opacity: 0.9;
+            @include buttonhover();
         }
     }
 }
