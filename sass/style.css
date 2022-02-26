@@ -165,7 +165,7 @@ header .headertop__back .fa-arrow-left:hover {
 .loaderspinner .dot1 {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  height: 50px;
   border-radius: 50%;
   background-color: #9356DC;
   margin: 0 15px 0 15px;
@@ -178,7 +178,7 @@ header .headertop__back .fa-arrow-left:hover {
 .loaderspinner .dot2 {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  height: 50px;
   border-radius: 50%;
   background-color: #FF79DA;
   margin: 0 15px 0 15px;
@@ -191,7 +191,7 @@ header .headertop__back .fa-arrow-left:hover {
 .loaderspinner .dot3 {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  height: 50px;
   border-radius: 50%;
   background-color: #99e2d0;
   margin: 0 15px 0 15px;
