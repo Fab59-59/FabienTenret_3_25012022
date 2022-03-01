@@ -380,12 +380,11 @@ header{
 .research__button
 {
     @include Button(0px, 0px, 58px, 0px);
+    @include flexboxcenter();
+    &:hover{
+        @include buttonhover();        
+    }
 }
-.research__button:hover
-{
-    @include buttonhover();
-}
-
 .fonctionnement{
     counter-reset: number;
     padding: 50px 0 70px 0;// haut,droite,bas,gauche
